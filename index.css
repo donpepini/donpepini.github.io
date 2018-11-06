@@ -1,0 +1,393 @@
+/* POLICE *********************************************/
+
+@font-face {
+  font-family: "poppins";
+  src: url("./Police/Poppins/poppins-regular-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "poppins";
+}
+
+/* WHOLE PAGE GRID ************************************/
+
+.wholePage-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh;
+}
+
+/* CADRE PRESENTATION **********************************/
+
+#cadrePresentation {
+  /* background-image: linear-gradient(to bottom ,rgba(100, 150, 167, 0.815), rgba(197, 98, 52, 0.849)); */
+  background-color: rgba(9, 9, 53, 0.856);
+}
+
+#titreportfolio {
+  color: whitesmoke;
+  font-size: 5em;
+  text-shadow: 4px 4px 4px lightslategray;
+  text-align: center;
+  margin-top: 17%;
+}
+
+.lettrePortfolio {
+  display: inline-block;
+  padding: 0px 25px;
+  margin: 0px;
+  -webkit-animation: in 1.5s ease-out;
+  animation: in 1.5s ease-out;
+}
+
+.lettreTurn{
+  display: inline-block;
+  -webkit-animation: in 1.5s ease-out;
+  animation: in 1.5s ease-out;
+}
+
+.lettrePortfolio:hover,
+.lettreTurn:hover {
+  -webkit-animation: out 0.0001s;
+  animation: out 0.0001s;
+}
+
+@keyframes in {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes out {
+  from {
+    transform: rotateY(360deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+#presentation {
+  font-size: 1.9em;
+  color: whitesmoke;
+  text-align: center;
+  margin-top: 17%;
+}
+
+.whiteBackground {
+  padding: 7px;
+  background-color: whitesmoke;
+  color: rgba(9, 9, 53, 0.856);
+  border-radius: 5px 20px;
+}
+
+/**NAVBAR **********************************************/
+
+#navBar {
+  background-color: whitesmoke;
+}
+
+.ulNavBar {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.ulNavBar a {
+  font-size: 1.8em;
+  text-decoration: none;
+  color: rgba(96, 96, 218, 0.719);
+  padding: 20px;
+  background: rgba(96, 96, 218, 0.719);
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.ulNavBar a:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: lightgrey;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.ulNavBar a:hover,
+.ulNavBar a:focus,
+.ulNavBar a:active {
+  color: white;
+}
+
+.ulNavBar a:hover:before,
+.ulNavBar a:focus:before,
+.ulNavBar a:active:before {
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+/*ABOUT ME **********************************************/
+
+#sectionAboutMe {
+  background-color: rgba(96, 96, 218, 0.719);
+  padding-bottom: 5%;
+}
+
+#titreAboutMe {
+  text-align: center;
+  font-size: 3em;
+  color: whitesmoke;
+  font-weight: bold;
+}
+
+#contentAboutMe {
+  display: flex;
+}
+
+#textAboutMe {
+  background-color: whitesmoke;
+  border-radius: 10px;
+  color: rgba(96, 96, 218, 0.719);
+  font-size: 1.2em;
+  margin: 2% 5%;
+  padding: 5%;
+  line-height: 2em;
+}
+
+#textAboutMe span {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/*WORKTOOLS*******************************************/
+
+#sectionWorkTools {
+  padding-bottom: 5%;
+}
+
+#titreWorkTools {
+  text-align: center;
+  font-size: 3em;
+  color: rgba(9, 9, 53, 0.705);
+  font-weight: bold;
+}
+
+#allWorkTools {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5%;
+  margin-right: 8%;
+}
+
+#allWorkTools h3 {
+  color: rgba(9, 9, 53, 0.705);
+  font-weight: bold;
+  font-size: 1.8em;
+}
+
+.tools{
+  color: rgba(9, 9, 53, 0.705);
+  font-size: 1.4em;
+  border: 1px rgba(9, 9, 53, 0.705) solid;
+  padding: 3%;
+  width: 25vw;
+  position: relative;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.tools:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: rgba(41, 41, 168, 0.705);
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.tools:after{
+    font-weight: bold;
+    position: absolute;
+    color: rgba(153, 153, 175, 0.514);
+    display: none;
+    right: -15%;
+}
+.javascriptTool:after {
+    content: "80%";
+}
+.reactTool:after{
+    content: "60%";
+}
+.nodeTool:after{
+    content: "30%";
+}
+.cssTool:after{
+    content: "70%";
+}
+.materializeTool:after{
+    content: "30%";
+}
+.materialuiTool:after{
+    content: "30%";
+}
+.bootstrapTool:after{
+    content: "70%";
+}
+.githubTool:after{
+    content: "80%";
+}
+.scrumTool:after{
+    content: "70%";
+}
+.ubuntuTool:after{
+    content: "70%";
+}
+.codepenTool:after{
+    content: "100%";
+}
+.jsbinTool:after{
+    content: "100%";
+}
+/***************/
+
+.javascriptTool:before {
+    right: 20%;
+}
+.reactTool:before{
+    right: 40%;
+}
+.nodeTool:before{
+    right: 70%;
+}
+.cssTool:before{
+    right: 30%;
+}
+.materializeTool:before{
+    right: 70%;
+}
+.materialuiTool:before{
+    right: 70%;
+}
+.bootstrapTool:before{
+    right: 30%;
+}
+.githubTool:before{
+    right: 20%;
+}
+.scrumTool:before{
+    right: 30%;
+}
+.ubuntuTool:before{
+    right: 30%;
+}
+.codepenTool:before{
+    right: 0%;
+}
+.jsbinTool:before{
+    right: 0%
+}
+
+.tools:hover,
+.tools:focus,
+.tools:active {
+  color: lightblue;
+}
+.tools:hover:after,
+.tools:focus:after,
+.tools:active:after{
+    display:inline;
+}
+
+.tools:hover:before,
+.tools:focus:before,
+.tools:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*MY GOALS ********************************/
+
+#sectionMyGoals {
+    padding-bottom: 5%;
+    position: relative;
+}
+
+#titreMyGoals {
+    text-align: center;
+    font-size: 3em;
+    color: rgba(9, 9, 53, 0.705);
+}
+
+.growth {
+    width: 95%;
+    height: 60%;
+    margin-left: 2.5%;
+}
+
+#sectionMyGoals p{
+    font-size: 1.3em;
+    position: absolute;
+    line-height: 2em;
+    color:rgba(9, 9, 53, 0.705);
+    left: 9%;
+    top: 15%;
+}
+
+/*CONTACT *********************************/
+
+#credit {
+    background-color: rgba(9, 9, 53, 0.863);
+    font-size: 1.7em;
+    color: whitesmoke;
+    text-align: center;
+    padding: 2%;
+}
+
