@@ -264,6 +264,10 @@ html {
   font-weight: bold;
 }
 
+.excited {
+  width: 100%;
+}
+
 @media (max-width: 768px) {
   #contentAboutMe img {
     display: none;
@@ -473,7 +477,6 @@ html {
 
 .growth {
   width: 100%;
-  height: 60%;
   margin: 0% 1%;
 }
 
